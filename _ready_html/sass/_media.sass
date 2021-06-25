@@ -1,0 +1,241 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+
+	.main-footer
+		.main-mnu
+			position: relative
+			margin-right: -17px
+			margin-bottom: 25px
+
+	.triangles-container
+		.tc-item
+			margin-bottom: 15px
+			&:first-child
+				margin-left: -40px
+	.main-mnu
+		display: none
+		float: right
+		min-width: 295px
+		text-align: right
+		background-color: #1C242C
+		top: 10px
+		position: relative
+		border-bottom: #111821 4px solid
+		border-top: #232D3B 4px solid
+		position: absolute
+		right: 15px
+		z-index: 2
+		ul
+			li
+				display: block
+				line-height: 0
+				padding: 0
+				&.active
+					a
+						background-color: #273646
+						text-decoration: none
+						font-family: "RalewayBold", $helvetica
+			a
+				display: block
+				line-height: 48px
+				padding: 0 20px
+				background-color: transparent
+				font-size: em(15px)
+				text-transform: uppercase
+				transition: all .5s ease
+				border-bottom: #222C36 1px solid
+				&:hover
+					background-color: #273646
+					text-decoration: none
+
+	.phone
+		padding-right: 52px
+
+	.s3-img-wrap
+		margin-left: 82px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+	.s8-left
+		.section-head
+			h2
+				text-align: center
+				&::after
+					left: 50%
+					transform: translate(-50%, 0px)
+			p
+				text-align: center
+
+
+	.s3-img-wrap
+		display: none
+
+	.section_3
+		.info-item-wrap .info-item
+			margin: 0 0 30px 0!important
+		.section-content
+			background-image: none
+			min-height: auto
+
+	.s3-img-wrapper
+		display: none
+
+	.section-content
+		.s1-bottom-triangle
+			background-size: cover
+
+	.header-wrap
+		margin-top: 0
+		h1
+			margin-top: 0
+
+	.main-mnu
+		top: 50px
+
+	.top-line
+		min-height: 140px
+	
+	.section_1
+		.s1-bottom
+			.info-item
+				margin: 40px 0
+				height: auto!important
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	.s8-item	
+		margin-bottom: 35px
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+		
+	.info-item
+		max-width: 100%
+		margin-top: 20px
+		margin-bottom: 20px
+		border-bottom: #D6DAE0 1px solid
+		padding-left: 0
+		p
+			border: none
+		&:first-child
+			margin-top: 0
+		h4
+			margin-top: 20px
+
+	.s1-bottom
+		.info-item
+			border-color: #546476
+	
+	.info-item-wrap:last-child
+		.info-item
+				border-color: transparent
+
+	.s1-bottom
+		.info-item-wrap:nth-child(2)
+			.info-item
+					margin-top: 45px
+	
+	.section_1
+		.section-content
+			background-position: bottom
+
+	.section_3
+		.section-content
+			padding-top: 10px
+			.info-item
+				border-color: #546476
+				p
+					margin-bottom: 0
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+
+	.slider
+		.owl-controls
+			.owl-nav
+				top: 8%
+
+	.section_5
+		.triangles-container
+			.tc-item
+				margin-left: 0
+
+	.phone-wrap
+		.phone
+			font-size: em(18px)
+			line-height: 34px
+			padding-right: 50px
+		.toggle-mnu
+			line-height: 34px
+			margin-top: 8px
+
+	.logo
+		img
+			width: 70px
+
+	.top-line
+		padding-top: 25px
+
+	.s2-item-wrap
+		padding: 0px 10px
+		width: 140px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.main-mnu
+		display: block !important
+
+

@@ -1,0 +1,290 @@
+@import "bourbon"
+
+@import "_var.sass"
+
+body
+	font-size: 15px
+	min-width: 320px
+	position: relative
+	line-height: em(22px)
+	font-family: "RalewayRegular", sans-serif
+	overflow-x: hidden
+	color: #333
+
+.hidden
+	display: none
+
+a, a:hover, a:focus,  a:active
+	color: $main-color
+	text-decoration: underline
+	outline: none
+
+.headers
+	font-family: "PFCentroSlabProMedium", $helvetica
+	text-transform: uppercase
+	font-weight: normal
+	color: $headrs-color
+
+h1, h2, h3, h4, h5, h6
+	@extend .headers
+	line-height: em(22px)
+
+h1
+	font-size: em(50px)
+
+h2
+	font-size: em(32px)
+
+h3
+	font-size: em(26px)
+
+b, strong
+	font-family: "RalewayBold", $helvetica
+	font-weight: normal
+
+.before
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+
+.trans
+	transition: all .5s ease
+
+.ulmnu
+	list-style-type: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+
+.main-head
+	min-height: 620px
+	background-size: cover
+	background-position: center
+	position: relative
+	padding-bottom: 120px
+	&::before
+		@extend .before
+		background-color: #394b5f
+		opacity: .85
+	h1
+		text-transform: none
+		line-height: em(18px)
+
+.top-line
+	padding-top: 45px
+	min-height: 160px
+	background-image: url(img/top_gradient.png)
+
+	background-repeat: repeat-x
+
+.logo
+	opacity: .95
+	img
+		width: 100px
+
+.main-mnu
+	font-size: em(15px)
+	li
+		line-height: 48px
+		padding: 0	10px
+		&.active
+			a
+				color: $main-color
+				text-decoration: underline
+		a
+			transition: all .5s ease
+			&:hover
+					color: $main-color
+					text-decoration: underline
+	ul
+		@extend .ulmnu
+	a
+		text-decoration: none
+		color: #fff
+
+.phone-wrap
+	position: relative
+	.phone
+		opacity: 0.9
+		color: #fff
+		font-family: "RobotoBold", $helvetica
+		font-size: em(20px)
+		line-height: 48px
+		text-align: right
+		white-space: nowrap
+	.toggle-mnu
+		float: right
+		position: absolute
+		right: 0
+		top: 0
+		text-align: center
+		line-height: 48px
+
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+.toggle-mnu span:after,
+.toggle-mnu span:before 
+	content: ""
+	position: absolute
+	left: 0
+	top: 9px
+
+.toggle-mnu span:after
+	top: 18px
+
+.toggle-mnu span 
+	position: relative
+	display: block
+
+.toggle-mnu span,
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	width: 100%
+	height: 2px
+	background-color: #fff
+	transition: all 0.3s
+	backface-visibility: hidden
+	border-radius: 2px
+
+
+.toggle-mnu.on span 
+	background-color: transparent
+
+.toggle-mnu.on span:before 
+	transform: rotate(45deg) translate(-1px, 0px)
+
+.toggle-mnu.on span:after 
+	transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu.on + #menu 
+	opacity: 1
+	visibility: visible
+
+.header-wrap
+	margin-top: 40px
+	h1
+		margin-top: 110px
+		color: #fff
+		border-bottom: $main-color 8px solid
+		display: inline-block
+		padding-bottom: 8px
+	ul
+		@extend .ulmnu
+		margin-top: 10px
+		li
+			display: block
+			font-family: "RalewaySemiBold", $helvetica
+			font-size: 18px
+			position: relative
+			margin-bottom: 12px
+			padding-left: 16px
+			&::before
+				content: ''
+				display: block
+				width: 6px
+				height: 11px
+				+triangle(12px, $main-color, right)
+				position: absolute
+				top: 4px
+				left: 0
+			a
+				text-decoration: none
+				color: #fff
+				&:hover
+					text-decoration: underline
+
+.header-left
+	margin-bottom: 50px
+
+.forms
+	background-color: transparentize(#243343, .2)
+	padding: 35px 35px 30px
+	color: #97a4b2
+	font-size: em(14px)
+	border-bottom: #1A222B 4px solid
+	h4
+		color: #fff
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(33px)
+		text-transform: none
+		margin: 0
+	p
+		line-height: em(23px)
+		margin-top: 10px
+	label
+		margin-top: 20px
+		margin-bottom: 15px
+		display: block
+		span
+			letter-spacing: 1.5px
+			display: block
+			margin-bottom: 6px
+			color: #778390
+	input
+		display: block
+		width: 100%
+		border: none
+		box-shadow: 0 -3px #1F2A36
+		background-color: #34465A
+		text-indent: 10px
+		padding: 10px 0
+		transition: all .5s ease
+		color: #fff
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(20px)
+		&:focus
+			box-shadow: 0 -5px $main-color
+			background-color: #394E65
+	.buttons
+		margin-top: 15px
+
+.button-wrap
+	text-align: center
+
+.buttons
+	display: inline-block
+	border: none
+	background-color: $main-color
+	color: #111
+	font-family: "PFCentroSlabProBold", $helvetica
+	font-size: em(22px)
+	padding: 12px 30px
+	border-bottom: #B97200 3px solid
+	transition: all .25s ease
+	text-decoration: none
+	border-radius: 2px
+	&:hover
+		background-color: #FFB338
+		text-decoration: none
+		color: #111
+	&:active
+		background-color: #DB8C0E
+		text-decoration: none
+		color: #111
+	&:focus
+		color: #111
+		text-decoration: none
+
+.arrow-wrap
+	@extend .button-wrap
+	position: relative
+	z-index: 2
+	top: 50px
+.arrow-bottom
+	display: inline-block
+	width: 40px
+	height: 40px
+	background-image: url(img/arrow_down.png)
+	cursor: pointer
+	opacity: .7
+	transition: all .25s ease
+	&:hover
+		opacity: 1
