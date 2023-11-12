@@ -1,7 +1,12 @@
-@import "bourbon"
-@import "_var.sass"
-@import "../app/libs/Magnific-Popup/magnific-popup.sass"
-@import "../app/libs/owl/assets/owl.carousel.sass"
+@use 'sass:math'
+
+@import bourbon
+@import vars.sass
+
+//Load Libs SASS
+@import 'app/libs/animate/animate.sass'
+@import 'app/libs/Magnific-Popup/magnific-popup.sass'
+@import 'app/libs/owl/assets/owl.carousel.sass'
 
 *::-webkit-input-placeholder
 	color: #fff
@@ -597,4 +602,4 @@ body textarea:required:valid
 			opacity: 0
 
 //ALWAYS END
-@import "_media.sass"
+@import media
